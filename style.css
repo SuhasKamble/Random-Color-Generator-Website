@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background: #f1f4f8;
+    overflow-y: hidden;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.66);
+    background: white;
+}
+
+.nav-center{
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+nav .nav-links{
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-links li{
+    margin-right: 1rem;
+}
+
+nav .nav-links li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 0.2rem;
+    font-size: 18px;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: royalblue;
+    letter-spacing: 1.4px;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container h2{
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.container h2 span{
+    font-weight: 700;
+}
+
+.container .btn{
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container .btn:hover{
+    background: black;
+    color: white;
+}
+
+.popup{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: royalblue;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    animation: moveTo 0.3s linear;
+    display: none;
+    border: 1px solid white;
+}
+
+ a.active{
+     border-bottom: 2px solid black;
+
+ }
+
+
+
+@keyframes moveTo{
+    0%{
+        bottom: -2rem;
+    }
+    100%{
+        bottom: 1rem; 
+    }
+}
+
+
+@media(max-width:890px){
+    .container{
+        width: 90%;
+    }
+
+    .container h2{
+        font-size: 2rem;
+    }
+}
+
+
